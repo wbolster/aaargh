@@ -23,10 +23,11 @@ Rationale
 
 The Python standard library contains the `optparse`, `getopt`, and `argparse`
 modules, and out in the wild you will find many alternative command line
-interface libraries stacked on top of these, such as *Cliff*, *Cement*,
-*opster*, *plac*, and many others. These libraries either separate the CLI part
-of your application from the actual code, force yet another API upon you, or
-even force you to hide your code in non-obvious framework constructs.
+interface libraries stacked on top of these, such as *cliff*, *cement*,
+*opster*, *plac*, and many others. These libraries either separate the command
+line interface setup of your application from the actual code, force yet
+another argument parsing API upon you, or even force you to hide your code in
+non-obvious framework constructs.
 
 This makes you scream *aaargh*. And, lo and behold, here it is!
 
