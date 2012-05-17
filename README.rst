@@ -82,9 +82,9 @@ this::
 
 
    @app.cmd
-   @app.cmd_defaults(who="my friend")  # overrides "visitor" for this command only
-   def greetings(who):
-       print("Greetings, %s." % who)
+   @app.cmd_defaults(name="my friend")  # overrides "visitor" for this command only
+   def greetings(name):
+       print("Greetings, %s." % name)
 
 
    if __name__ == '__main__':
