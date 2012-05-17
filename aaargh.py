@@ -57,7 +57,6 @@ class App(object):
 
         def wrapper(func):
             subcommand = name if name is not None else func.__name__
-            assert isinstance(subcommand, basestring)
 
             parser_kwargs.setdefault('help', "")  # improves --help output
             subparser = self._subparsers.add_parser(
@@ -111,7 +110,7 @@ class App(object):
 
         All arguments are passed on to :py:meth:`ArgumentParser.set_defaults`.
         """
-        if len(kwargs) == 1 and callable(kwargs.values()[0]):
+        if len(kwargs) == 1 and callable(list(kwargs.values())[0]):
             raise TypeError("defaults() decorator requires arguments, "
                             "but none were supplied")
 

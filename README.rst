@@ -14,6 +14,8 @@ control systems provide many different commands using a single entry point.
 Holy Grail*. The acronym *Aaargh* expands to *an astonishingly awesome
 application argument helper*, but omits a few letters to make it triple A.
 
+*Aaargh* works with both Python 2.6+ and Python 3.
+
 
 Rationale
 ---------
@@ -66,20 +68,20 @@ this::
 
    @app.cmd
    def hello(name):  # application level "name" argument is always passed
-       print "Hello, world!"
+       print("Hello, world!")
 
 
    @app.cmd(name="hi", help="Say hi")  # override subcommand name
    @app.cmd_arg('-r', '--repeat', type=int, default=1, help="How many times?")
    def say_hi(name, repeat):  # both application and subcommand args
-       for i in xrange(repeat):
-           print "Hi, %s!" % name
+       for i in range(repeat):
+           print("Hi, %s!" % name)
 
 
    @app.cmd
    @app.cmd_defaults(who="my friend")  # overrides "visitor" for this command only
    def greetings(who):
-       print "Greetings, %s." % who
+       print("Greetings, %s." % who)
 
 
    if __name__ == '__main__':
