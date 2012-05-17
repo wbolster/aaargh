@@ -1,5 +1,6 @@
+******
 Aaargh
-======
+******
 
 *Aaargh*: an astonishingly awesome application argument helper.
 
@@ -18,7 +19,7 @@ application argument helper*, but omits a few letters to make it triple A.
 
 
 Rationale
----------
+=========
 
 The Python standard library contains the `optparse`, `getopt`, and `argparse`
 modules, and out in the wild you will find many alternative command line
@@ -31,7 +32,7 @@ This makes you scream *aaargh*. And, lo and behold, here it is!
 
 
 Usage
------
+=====
 
 *Aaargh* delegates almost all of its work to the `argparse` module, which does
 a great job handling arguments and printing usage information. However,
@@ -48,7 +49,7 @@ arguments, providing defaults, adding help texts, and so on.
 
 
 Example
--------
+=======
 
 A simple command line application that exposes a few functions looks like
 this::
@@ -122,7 +123,7 @@ The command line interface for this application behaves like this::
 
 
 Installation
-------------
+============
 
 Installation using `pip` is trivial, especially when using `virtualenv`::
 
