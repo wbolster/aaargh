@@ -83,9 +83,11 @@ class App(object):
         return wrapper
 
     def cmd_arg(self, *args, **kwargs):
-        """Decorator to specify an command line argument for a subcommand.
+        """Decorator to specify a command line argument for a subcommand.
 
         All arguments are passed on to :py:meth:`ArgumentParser.add_argument`.
+
+        Note: this function must be used in conjunction with .cmd().
         """
 
         # TODO: perhaps add a 'group' argument to cmd_arg() that
@@ -109,6 +111,8 @@ class App(object):
         subcommands.
 
         All arguments are passed on to :py:meth:`ArgumentParser.set_defaults`.
+
+        Note: this function must be used in conjunction with .cmd().
         """
         if len(kwargs) == 1 and callable(list(kwargs.values())[0]):
             raise TypeError("defaults() decorator requires arguments, "
