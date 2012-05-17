@@ -143,6 +143,11 @@ Now verify that it works::
 History
 =======
 
+Version 0.2 (2012-05-17)
+------------------------
+
+* Add support for Python 3
+
 Version 0.1 (2012-05-17)
 ------------------------
 

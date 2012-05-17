@@ -8,7 +8,7 @@ _NO_FUNC = object()
 
 
 __all__ = ['App', '__version__']
-__version__ = '0.1'
+__version__ = '0.2'
 
 
 class App(object):
