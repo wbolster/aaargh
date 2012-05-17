@@ -5,7 +5,7 @@ import aaargh
 
 setup(name='aaargh',
       version=aaargh.__version__,
-      description='An arguably awesome application argument helper',
+      description='An astonishingly awesome application argument helper',
       long_description=open(join(dirname(__file__), 'README.rst')).read(),
       author='Wouter Bolsterlee',
       author_email='uws@xs4all.nl',
