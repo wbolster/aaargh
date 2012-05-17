@@ -126,7 +126,7 @@ Installation using `pip` is trivial, especially when using `virtualenv`::
 
    (yourenv) $ pip install aaargh
 
-Now verify that it works:
+Now verify that it works::
 
    (yourenv) $ python
    >>> import aaargh
