@@ -10,18 +10,9 @@ may have its own command line arguments. This is similar to the way version
 control systems provide many different commands using a single entry point.
 (Examples include ``bzr commit`` and ``git checkout``).
 
-
-Implementation
---------------
-
-*Aaargh* delegates almost all of its work is to the `argparse` module, which
-does a great job handling arguments and printing usage information. However,
-`argparse` is a bit verbose and cumbersome for many simple applications, so
-*Aaargh* lets application authors minimize boilerplate code by wrapping
-commonly used `argparse` features in a few non-intrusive decorators. *Aaargh*
-does not hide the `argparse` API, since the decorators have *exactly the same
-API* as their `argparse` counterparts. This is a deliberate design decision,
-and this is what makes *Aaargh* different from its many alternatives.
+*Aaargh* is named after one of the castles in the movie *Monty Python and the
+Holy Grail*. The acronym *Aaargh* expands to *an astonishingly awesome
+application argument helper*, but omits a few letters to make it triple A.
 
 
 Rationale
@@ -29,24 +20,33 @@ Rationale
 
 The Python standard library contains the `optparse`, `getopt`, and `argparse`
 modules, and out in the wild you will find many alternative command line
-interface libraries, such as *Cliff*, *Cement*, *opster*, *plac*, and many
-others. These libraries either separate the CLI part of your application from
-the actual code, force yet another API upon you, or even force you to hide your
-code in non-obvious framework constructs.
+interface libraries stacked on top of these, such as *Cliff*, *Cement*,
+*opster*, *plac*, and many others. These libraries either separate the CLI part
+of your application from the actual code, force yet another API upon you, or
+even force you to hide your code in non-obvious framework constructs.
 
 This makes you scream *aaargh*. And, lo and behold, here it is!
-
-*Aaargh* is named after one of the castles in the movie *Monty Python and the
-Holy Grail*. The acronym *Aaargh* expands to *an astonishingly awesome
-application argument helper*, but omits a few letters to make it triple A.
 
 
 Usage
 -----
 
+*Aaargh* delegates almost all of its work to the `argparse` module, which does
+a great job handling arguments and printing usage information. However,
+`argparse` is a bit verbose and cumbersome for many simple applications, so
+*Aaargh* lets application authors minimize boilerplate code by wrapping
+commonly used `argparse` features in a few non-intrusive decorators. *Aaargh*
+does not hide the `argparse` API, since the decorators have *exactly the same
+API* as their `argparse` counterparts. This is a deliberate design decision,
+and this is what makes *Aaargh* different from its many alternatives.
+
 The docstrings in the `aaargh.py` file contain all information you need to use
 *Aaargh*. Refer to the `argparse` documentation for information on specifying
 arguments, providing defaults, adding help texts, and so on.
+
+
+Example
+-------
 
 A simple command line application that exposes a few functions looks like
 this::
@@ -126,4 +126,12 @@ Installation using `pip` is trivial, especially when using `virtualenv`::
 
    (yourenv) $ pip install aaargh
 
-Note: for Python 2.6 you also need to install the `argparse` module.
+Now verify that it works:
+
+   (yourenv) $ python
+   >>> import aaargh
+   >>> help(aaargh)
+
+.. note:
+
+   For Python 2.6 you also need to install the `argparse` module.
