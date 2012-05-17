@@ -138,3 +138,12 @@ Now verify that it works::
 .. note:
 
    For Python 2.6 you also need to install the `argparse` module.
+
+
+History
+=======
+
+Version 0.1 (2012-05-17)
+------------------------
+
+* Initial release
