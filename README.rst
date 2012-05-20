@@ -8,20 +8,20 @@ Aaargh
 applications really easy. Applications built with *Aaargh* provide a single
 executable with a subcommand for each exposed Python function. Each subcommand
 may have its own command line arguments. This is similar to the way version
-control systems provide many different commands using a single entry point.
-(Examples include ``bzr commit`` and ``git checkout``).
+control systems provide multiple commands using a single entry point. (Examples
+include ``bzr commit`` and ``git checkout``).
 
 *Aaargh* is named after one of the castles in the movie *Monty Python and the
-Holy Grail*. The acronym *Aaargh* expands to *an astonishingly awesome
+Holy Grail*. The acronym *Aaargh* stands for *an astonishingly awesome
 application argument helper*, but omits a few letters to make it triple A.
 
-*Aaargh* works with both Python 2.6+ and Python 3.
+*Aaargh* is compatible with both Python 2.6+ and Python 3.
 
 
 Rationale
 =========
 
-The Python standard library contains the `optparse`, `getopt`, and `argparse`
+The Python standard library contains the *optparse*, *getopt*, and *argparse*
 modules, and out in the wild you will find many alternative command line
 interface libraries stacked on top of these, such as *cliff*, *cement*,
 *opster*, *plac*, and many others. Some of these libraries separate the command
@@ -131,7 +131,7 @@ Installation using `pip` is trivial, especially when using `virtualenv`::
 
    (yourenv) $ pip install aaargh
 
-Now verify that it works::
+After succesful installation, this should work::
 
    (yourenv) $ python
    >>> import aaargh
