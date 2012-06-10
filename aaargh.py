@@ -20,6 +20,7 @@ class App(object):
 
     def __init__(self, *args, **kwargs):
         self._parser = ArgumentParser(*args, **kwargs)
+        self._global_args = []
         self._subparsers = self._parser.add_subparsers(title="Subcommands")
         self._pending_args = []
         self._defaults = {}
@@ -29,6 +30,7 @@ class App(object):
 
         All arguments are passed on to :py:meth:`ArgumentParser.add_argument`.
         """
+        self._global_args.append((args, kwargs))
         return self._parser.add_argument(*args, **kwargs)
 
     def defaults(self, **kwargs):
@@ -61,6 +63,11 @@ class App(object):
             parser_kwargs.setdefault('help', "")  # improves --help output
             subparser = self._subparsers.add_parser(
                     subcommand, *parser_args, **parser_kwargs)
+
+            # Add global arguments to subcommand as well so that they
+            # can be given after the subcommand on the CLI.
+            for global_args, global_kwargs in self._global_args:
+                subparser.add_argument(*global_args, **global_kwargs)
 
             # Add any pending arguments
             for args, kwargs in self._pending_args:
