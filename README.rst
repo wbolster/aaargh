@@ -145,6 +145,11 @@ After succesful installation, this should work::
 History
 =======
 
+Version 0.3 (2012-06-10)
+------------------------
+
+* Also accept global args after the subcommand
+
 Version 0.2 (2012-05-17)
 ------------------------
 
