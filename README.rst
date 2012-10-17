@@ -145,6 +145,12 @@ After succesful installation, this should work::
 History
 =======
 
+Version 0.4 (2012-10-17)
+------------------------
+
+* Fix automatic `argparse` dependency installation when using `pip install` with
+  Python 2.6.
+
 Version 0.3 (2012-06-10)
 ------------------------
 

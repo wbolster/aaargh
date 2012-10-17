@@ -10,7 +10,7 @@ _NO_FUNC = object()
 __all__ = ['App', '__version__']
 
 # XXX: Keep version number in sync with setup.py
-__version__ = '0.3'
+__version__ = '0.4'
 
 
 class App(object):
