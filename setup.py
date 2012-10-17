@@ -1,10 +1,8 @@
 from os.path import join, dirname
 from setuptools import setup
 
-import aaargh
-
 setup(name='aaargh',
-      version=aaargh.__version__,
+      version='0.3',  # XXX: Keep version number in sync with setup.py
       description='An astonishingly awesome application argument helper',
       long_description=open(join(dirname(__file__), 'README.rst')).read(),
       author='Wouter Bolsterlee',
