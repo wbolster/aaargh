@@ -170,4 +170,3 @@ Version 0.1 (2012-05-17)
 .. image:: https://d2weczhvl823v0.cloudfront.net/wbolster/aaargh/trend.png
    :alt: Bitdeli badge
    :target: https://bitdeli.com/free
-
