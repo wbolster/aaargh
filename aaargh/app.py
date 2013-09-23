@@ -59,11 +59,6 @@ class App(object):
             subparser = self._subparsers.add_parser(
                 subcommand, *parser_args, **parser_kwargs)
 
-            # Add global arguments to subcommand as well so that they
-            # can be given after the subcommand on the CLI.
-            for global_args, global_kwargs in self._global_args:
-                subparser.add_argument(*global_args, **global_kwargs)
-
             # Add any pending arguments
             for args, kwargs in self._pending_args:
                 subparser.add_argument(*args, **kwargs)
