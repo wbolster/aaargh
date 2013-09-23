@@ -145,6 +145,12 @@ After succesful installation, this should work::
 History
 =======
 
+Version 0.5 (2013-09-23)
+------------------------
+
+* No longer add global args to subcommands  (issues #3 and #5)
+* Switch to `pbr` for packaging
+
 Version 0.4 (2012-10-17)
 ------------------------
 
