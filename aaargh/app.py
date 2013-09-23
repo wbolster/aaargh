@@ -1,16 +1,9 @@
-"""
-Aaargh, an astonishingly awesome application argument helper
-"""
-
 from argparse import ArgumentParser
 
 _NO_FUNC = object()
 
 
-__all__ = ['App', '__version__']
-
-# XXX: Keep version number in sync with setup.py
-__version__ = '0.4'
+__all__ = ['App']
 
 
 class App(object):
@@ -64,7 +57,7 @@ class App(object):
 
             parser_kwargs.setdefault('help', "")  # improves --help output
             subparser = self._subparsers.add_parser(
-                    subcommand, *parser_args, **parser_kwargs)
+                subcommand, *parser_args, **parser_kwargs)
 
             # Add global arguments to subcommand as well so that they
             # can be given after the subcommand on the CLI.
