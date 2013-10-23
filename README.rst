@@ -87,6 +87,11 @@ this::
        print("Greetings, %s." % name)
 
 
+   @app.cmd(alias='bye')  # Allow "bye" aswell as goodbye
+   def goodbye(name):
+       print("Goodbye, cruel world!")
+
+
    if __name__ == '__main__':
        app.run()
 

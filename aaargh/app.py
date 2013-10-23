@@ -1,9 +1,16 @@
 from argparse import ArgumentParser
+from sys import version_info
 
 _NO_FUNC = object()
 
 
 __all__ = ['App']
+
+
+if version_info[0] == 2:
+    strtype = basestring
+else:
+    strtype = str
 
 
 class App(object):
@@ -35,12 +42,13 @@ class App(object):
         """
         return self._parser.set_defaults(**kwargs)
 
-    def cmd(self, _func=_NO_FUNC, name=None, *args, **kwargs):
+    def cmd(self, _func=_NO_FUNC, name=None, alias=None, *args, **kwargs):
         """Decorator to create a command line subcommand for a function.
 
         By default, the name of the decorated function is used as the
         name of the subcommand, but this can be overridden by specifying the
-        `name` argument. Additional arguments are passed to the subcommand's
+        `name` argument. Aliases are also possible via the alias argument.
+        Additional arguments are passed to the subcommand's
         :py:class:`ArgumentParser`.
         """
         if _func is not _NO_FUNC:
@@ -58,6 +66,11 @@ class App(object):
             parser_kwargs.setdefault('help', "")  # improves --help output
             subparser = self._subparsers.add_parser(
                 subcommand, *parser_args, **parser_kwargs)
+            if alias:
+                parser_map = self._subparsers._name_parser_map
+                aliases = [alias, ] if isinstance(alias, strtype) else alias
+                for subcommand_alias in aliases:
+                    parser_map[subcommand_alias] = parser_map[subcommand]
 
             # Add any pending arguments
             for args, kwargs in self._pending_args:
