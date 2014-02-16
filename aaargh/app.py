@@ -121,7 +121,7 @@ class App(object):
         self._defaults[None] = kwargs
         return lambda func: func
 
-    def run(self, *args, **kwargs):
+    def run(self, args=None, namespace=None):
         """Run the application.
 
         This method parses the arguments and takes the appropriate actions. If
@@ -136,8 +136,12 @@ class App(object):
         if None in self._defaults:
             raise TypeError("cmd_defaults() called without matching cmd()")
 
-        kwargs = vars(self._parser.parse_args(*args, **kwargs))
-        func = kwargs.pop('_func')
+        kwargs = vars(self._parser.parse_args(args=args, namespace=namespace))
+        sentinel = object()
+        func = kwargs.pop('_func', sentinel)
+
+        if func is sentinel:
+            self._parser.error("too few arguments")
 
         if func in self._defaults:
             kwargs.update(self._defaults[func])
