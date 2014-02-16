@@ -10,7 +10,6 @@ setup(
     author_email='uws@xs4all.nl',
     url='https://github.com/wbolster/aaargh',
     packages=find_packages(),
-    install_requires=['argparse'],
     license='BSD',
     classifiers=(
         'Development Status :: 4 - Beta',
