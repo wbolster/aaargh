@@ -145,6 +145,13 @@ After succesful installation, this should work::
 History
 =======
 
+Version 0.6 (2014-02-16)
+------------------------
+
+* No longer use `pbr` for packaging (issue #12)
+* Add proper licensing file (issue #9)
+* Fix error message when calling the program without a subcommand under Python 3
+
 Version 0.5 (2013-09-23)
 ------------------------
 
