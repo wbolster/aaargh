@@ -150,6 +150,11 @@ After succesful installation, this should work::
 History
 =======
 
+Version 0.7 (2014-02-18)
+------------------------
+
+* Add basic support for command aliases packaging (issue #4, issue #10)
+
 Version 0.6 (2014-02-16)
 ------------------------
 
