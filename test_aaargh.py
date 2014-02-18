@@ -46,3 +46,23 @@ def sample_app():
 def test_aaargh(sample_app, cmd_line, expected):
     actual = sample_app.run(shlex.split(cmd_line))
     assert actual == expected
+
+
+def test_alias():
+    app = aaargh.App()
+
+    @app.cmd(alias='foo2')
+    def foo():
+        return 'foo-result'
+
+    @app.cmd(alias=['bar1', 'bar2', b'bar3'.decode('ascii')])
+    def bar():
+        return 'bar-result'
+
+    assert app.run(['foo']) == 'foo-result'
+    assert app.run(['foo2']) == 'foo-result'
+
+    assert app.run(['bar']) == 'bar-result'
+    assert app.run(['bar1']) == 'bar-result'
+    assert app.run(['bar2']) == 'bar-result'
+    assert app.run(['bar3']) == 'bar-result'
