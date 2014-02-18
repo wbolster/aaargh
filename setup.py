@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='aaargh',
-    version='0.6',
+    version='0.7aaaaaaa',
     description='An astonishingly awesome application argument helper',
     long_description=open(join(dirname(__file__), 'README.rst')).read(),
     author='Wouter Bolsterlee',
