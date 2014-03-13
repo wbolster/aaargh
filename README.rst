@@ -150,6 +150,11 @@ After succesful installation, this should work::
 History
 =======
 
+Version 0.7.1 (2014-03-13)
+--------------------------
+
+* Include licensing file in source distribution (issue #9, issue #13)
+
 Version 0.7 (2014-02-18)
 ------------------------
 
