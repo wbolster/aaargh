@@ -2,6 +2,10 @@
 Aaargh
 ******
 
+.. image:: https://travis-ci.org/wbolster/aaargh.svg?branch=master
+   :target: https://travis-ci.org/wbolster/aaargh
+
+
 *Aaargh*: an astonishingly awesome application argument helper.
 
 *Aaargh* is a Python module that makes building friendly command line
