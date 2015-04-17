@@ -2,8 +2,7 @@
 Aaargh
 ******
 
-
-IMPORTANT NOTE
+Important note
 ==============
 
 **This project is no longer maintained!** The author suggests
@@ -12,9 +11,11 @@ projects.  Migrations of existing applications should also be very
 straight-forward, since Aaargh's features are a subset of what Click
 offers, with a similar decorator-based API.
 
+Introduction
+============
+
 .. image:: https://travis-ci.org/wbolster/aaargh.svg?branch=master
    :target: https://travis-ci.org/wbolster/aaargh
-
 
 *Aaargh*: an astonishingly awesome application argument helper.
 
