@@ -2,6 +2,16 @@
 Aaargh
 ******
 
+
+IMPORTANT NOTE
+==============
+
+**This project is no longer maintained!** The author suggests
+to use the `Click <http://click.pocoo.org/>`_ library instead for new
+projects.  Migrations of existing applications should also be very
+straight-forward, since Aaargh's features are a subset of what Click
+offers, with a similar decorator-based API.
+
 .. image:: https://travis-ci.org/wbolster/aaargh.svg?branch=master
    :target: https://travis-ci.org/wbolster/aaargh
 
